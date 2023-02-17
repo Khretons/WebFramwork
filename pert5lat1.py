@@ -12,4 +12,4 @@ def load_data(sheets_url):
 df = load_data(st.secrets["public_gsheets_url"])
 
 # Print results.
-for row in df.itertuples():
+for row in df.itertuples()
