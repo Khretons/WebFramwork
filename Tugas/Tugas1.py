@@ -47,17 +47,15 @@ frame_data = pd.DataFrame({
 
 st.write(frame_data)
 
-# Dataframe dan Line-chart merupakan data yang berbeda
-
+# I didn't use all of the data from the Dataframe
 st.subheader("Line chart:")
 
-st.write("CD PROJEKT SA (CDR), 2022")
+st.write("Number of Weapon's Collab")
 chart_data = pd.DataFrame({
-    'Month' : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    'Terakhir' : [180.06, 168.40, 173.74, 120.98, 108.66, 95.68],
-    'Tertinggi' : [208.10, 188.00, 187.14, 179.92, 125.40, 110.62],
-    'Terendah' : [166.10, 150.20, 155.00, 119.78, 105.88, 86.69]
+    'Weapon' : ['ENs curse', 'Cutting Board', 'X-potato', 'CEOs Tears', 'Idol Song', 'BL Book', 'Wammy Water', 'Fan Beam', 'Holo Bomb'],
+    'Collab Total' : [2, 2, 2, 1, 2, 2, 2, 2, 2],
+    'Most Used' : [1, 1, 7, 10, 5, 4, 6, 2, 3],
 })
 
-chart_data = chart_data.set_index('Month')
+chart_data = chart_data.set_index('Weapon')
 st.line_chart(chart_data)
